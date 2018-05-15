@@ -1,0 +1,5 @@
+# tasks file for elasticsearch
+---
+#- include_tasks: install.yml
+- include_tasks: RedHat.yml
+#- include_tasks: config.yml

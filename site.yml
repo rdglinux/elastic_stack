@@ -1,0 +1,15 @@
+---
+- name: Instalando os pre-requisitos
+  hosts: all
+  become: True
+
+  roles:
+    - roles/common 
+    - roles/oracle-java8
+
+- name: Instalando ElasticSearch
+  hosts: elastic
+  become: False
+
+  roles:
+    - roles/elastic

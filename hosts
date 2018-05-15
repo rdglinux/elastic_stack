@@ -1,0 +1,12 @@
+[elastic] 
+192.168.100.102
+
+[logstash]
+192.168.100.102
+
+[kibana]
+192.168.100.102
+
+[all:vars]
+ansible_user=root
+ansible_ssh_pass=churrops

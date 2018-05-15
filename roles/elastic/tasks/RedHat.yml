@@ -1,0 +1,18 @@
+---
+- name: Import GPG KEY 
+  rpm_key:
+    state: present
+    key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+- name: Copying file elasticsearch.repo to /etc/yum.repos.d/ 
+  copy:
+    src: elasticsearch.repo 
+    dest: /etc/yum.repos.d/
+    owner: root
+    group: root
+    mode: 0644
+
+- name: install the latest version of ElasticSearch
+  yum:
+    name: elasticsearch
+    state: latest
